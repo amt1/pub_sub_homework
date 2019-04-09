@@ -18,10 +18,22 @@ InfoView.prototype.render = function(instrumentFamily){
   infoHeading.textContent = `${instrumentFamily.name}`;
   const infoParagraph = document.createElement('p');
   infoParagraph.textContent = `${instrumentFamily.description}`;
+  const infoSubHeading = document.createElement('h4');
+  infoSubHeading.textContent = `Instruments in the ${instrumentFamily.name} family include:`;
+  const instrumentList = document.createElement('ul');
+  let instrument = '';
+    instrumentFamily.instruments.forEach((instrumentListed, index) => {
+    instrument = document.createElement('li');
+    instrument.textContent=`${instrumentListed}`;
+    instrumentList.appendChild(instrument);
+  });
   this.container.innerHTML = '';
   this.container.appendChild(infoHeading);
-
   this.container.appendChild(infoParagraph);
+  this.container.appendChild(infoSubHeading);
+  this.container.appendChild(infoSubHeading);
+  this.container.appendChild(instrumentList);
+
 };
 
 module.exports = InfoView;
