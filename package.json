@@ -1,0 +1,25 @@
+{
+  "name": "hw_pubsub_webpack_instruments_start",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amt1/pub_sub_homework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amt1/pub_sub_homework/issues"
+  },
+  "homepage": "https://github.com/amt1/pub_sub_homework#readme",
+  "description": ""
+}
