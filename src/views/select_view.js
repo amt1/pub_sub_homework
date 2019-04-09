@@ -7,6 +7,7 @@ const SelectView = function(element){
 SelectView.prototype.bindEvents = function(){
   PubSub.subscribe('InstrumentFamilies:all-instruments-ready', (evt) => {
     const allInstruments = evt.detail;
+    console.log('all instruments:', allInstruments);
     this.populate(allInstruments);
   });
 
@@ -17,9 +18,10 @@ SelectView.prototype.bindEvents = function(){
 };
 
 SelectView.prototype.populate = function(instrumentFamiliesData){
+  console.log('instrumentFamiliesData', instrumentFamiliesData);
   instrumentFamiliesData.forEach((instrumentFamily, index) => {
     const option = document.createElement('option');
-    option.textContent = instrumentFamiliesData.name;
+    option.textContent = instrumentFamily.name;
     option.value = index;
     this.element.appendChild(option);
   })

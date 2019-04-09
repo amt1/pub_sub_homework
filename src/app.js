@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', function(){
   const InfoDisplay = new InfoView(infoDiv);
   InfoDisplay.bindEvents();
 
-  const instrumentDataSource = new InstrumentFamilies(instrumentFamilyData);
+  const instrumentDataSource = new InstrumentFamilies(InstrumentFamilyData);
   instrumentDataSource.bindEvents();
 });
